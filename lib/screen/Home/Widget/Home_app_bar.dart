@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 
 class coustomAppBar extends StatelessWidget {
-  const coustomAppBar({
-    super.key,
-  });
+  const coustomAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +16,12 @@ class coustomAppBar extends StatelessWidget {
             padding: const EdgeInsets.all(20),
           ),
           onPressed: () {},
-    
+
           icon: Image.asset("images/icon.png", height: 25),
+        ),
+        Text(
+          "FlutterCart",
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
         IconButton(
           style: IconButton.styleFrom(
