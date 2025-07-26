@@ -1,7 +1,8 @@
 import 'package:ecomappwithprovider/constants.dart';
 import 'package:ecomappwithprovider/screen/Cart/cart_screen.dart';
+import 'package:ecomappwithprovider/screen/Favorite/favorite.dart';
 import 'package:ecomappwithprovider/screen/Home/home_screen.dart';
-import 'package:ecomappwithprovider/screen/favorite.dart';
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 

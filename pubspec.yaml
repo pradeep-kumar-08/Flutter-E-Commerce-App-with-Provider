@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   google_fonts: ^6.2.1
   provider: ^6.1.5
+  
 
 
 dev_dependencies:
@@ -64,6 +65,14 @@ flutter:
   assets:
     - images/
     - images/all/
+    - images/shoes/
+    - images/shoes/
+    - images/beauty/
+    - images/women fashion/
+    - images/men fashion/
+    - images/jewelry/ 
+    
+
    
 
   # An image asset can refer to one or more resolution-specific "variants", see

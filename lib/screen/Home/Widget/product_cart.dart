@@ -1,5 +1,8 @@
 import 'package:ecomappwithprovider/models/product_model.dart';
+import 'package:ecomappwithprovider/provider/favorite_provider.dart';
+import 'package:ecomappwithprovider/screen/Detail/details_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../../../constants.dart';
 
 class ProductCart extends StatelessWidget {
@@ -8,8 +11,17 @@ class ProductCart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final provider = FavoriteProvider.of(context);
+
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailsScreen(product: product),
+          ),
+        );
+      },
       child: Stack(
         children: [
           Container(
@@ -20,13 +32,16 @@ class ProductCart extends StatelessWidget {
             ),
             child: Column(
               children: [
-                SizedBox(height: 10),
+                SizedBox(height: 5),
                 Center(
-                  child: Image.asset(
-                    product.image,
-                    width: 100,
-                    height: 100,
-                    fit: BoxFit.cover,
+                  child: Hero(
+                    tag: product.image,
+                    child: Image.asset(
+                      product.image,
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -70,6 +85,35 @@ class ProductCart extends StatelessWidget {
                   ],
                 ),
               ],
+            ),
+          ),
+          //Fot favorite icone
+          Positioned(
+            child: Align(
+              alignment: Alignment.topRight,
+              child: Container(
+                height: 40,
+                width: 40,
+                decoration: BoxDecoration(
+                  color: kprimaryColor,
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(20),
+                  ),
+                ),
+                child: GestureDetector(
+                  onTap: () {
+                    provider.toggleFavorite(product);
+                  },
+                  child: Icon(
+                    provider.isExist(product)
+                        ? Icons.favorite
+                        : Icons.favorite_border,
+                    color: Colors.white,
+                    size: 22,
+                  ),
+                ),
+              ),
             ),
           ),
         ],
