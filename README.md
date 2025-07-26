@@ -54,5 +54,5 @@ This is a simple and clean eCommerce mobile application built with **Flutter** u
 
 ---
 
-## 📂 Folder Structure
+
 
