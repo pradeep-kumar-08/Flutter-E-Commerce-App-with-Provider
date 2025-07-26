@@ -26,11 +26,8 @@ This is a simple and clean eCommerce mobile application built with **Flutter** u
   - Clean and reactive UI based on `ChangeNotifier`
 
 ---
-## 📱 How to Works App ?
+
 ## 🎬 App Demo
-
-[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-
 ## 📱 Screenshots
 
 | ![Main Product Page](https://github.com/user-attachments/assets/56dbf5b0-b8c6-4330-915c-cf77672c316a) | ![All Categories](https://github.com/user-attachments/assets/447d60e0-9be6-4a7b-82c7-085ef0e8de14) | ![Add to Cart](https://github.com/user-attachments/assets/76f9ce93-2131-4c55-ac6e-4a428d08ddff) |
